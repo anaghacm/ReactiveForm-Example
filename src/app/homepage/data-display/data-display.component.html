@@ -1,0 +1,20 @@
+<div class="display-module">
+    <div class="no-data" *ngIf="!details.firstName">
+        <p>Ooopz! No data has been saved.</p>
+    </div>
+    <div class="data" *ngIf="details.firstName">
+        <p class="greeting">Congradulations</p>
+        <p class="saved">Your data has been saved!</p>
+        <div class="details">
+            <p><strong>Name : </strong> {{details.firstName}} {{details.lastName}}</p>
+            <p><strong>Address : </strong>{{details.address}}</p>
+            <p><strong>Email id : </strong> {{details.email}}</p>
+            <p><strong>Password : </strong> {{details.password}}</p>
+            <p><strong>Phone number : </strong> {{details.mobile}}</p>
+            <p><strong>Message : </strong> {{details.message}}</p>
+        </div>
+        <div>
+            <p class="thanks">Thank you!</p>
+        </div>
+    </div>
+</div>

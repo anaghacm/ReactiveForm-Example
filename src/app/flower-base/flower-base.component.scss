@@ -1,0 +1,31 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.flower-module{
+    position: absolute;
+    left: -80px;
+    top: 280px;
+    background-image: url('../../assets/images/flowerpot.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 180px;
+    height: 300px;
+    z-index: 10;
+}
+
+@include tablet{
+    .flower-module {
+        width: 90px;
+        height: 180px;
+        left: 10px;
+        top: 380px;
+    }
+}
+
+@include mobile{
+    .flower-module {
+        left: 10px;
+        top: 650px;
+    }
+}

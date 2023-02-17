@@ -1,0 +1,84 @@
+<section class="formbase-module">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-12 form-col">
+                <app-flower-base></app-flower-base>
+                <div class="form-module">
+                    <div class="heading">
+                        <p>REGISTRATION FORM</p>
+                    </div>
+                    <div class="form-div">
+                        <form class="reg-form" [formGroup]="registrationForm"
+                            (ngSubmit)="saveDetails(registrationForm)">
+                            <div class="input-div half-div">
+                                <label class="label-name" for="fname">First Name</label>
+                                <input class="form-control" type="text" formControlName="fname" name="fname"
+                                    placeholder="first name">
+                                <small class="warning-message"
+                                    *ngIf="this.registrationForm.get('fname')?.touched && this.registrationForm.get('fname')?.invalid">Please
+                                    enter a valid first name</small>
+                            </div>
+                            <div class="input-div half-div">
+                                <label class="label-name" for="lname">Last Name</label>
+                                <input class="form-control" type="text" formControlName="lname" name="lname"
+                                    placeholder="last name">
+                                <small class="warning-message"
+                                    *ngIf="this.registrationForm.get('lname')?.touched && this.registrationForm.get('lname')?.invalid">Please
+                                    enter a valid last name</small>
+                            </div>
+                            <div class="input-div half-div">
+                                <label class="label-name" for="address">Address</label>
+                                <textarea class="form-control text-area" name="address" formControlName="address"
+                                    cols="30" rows="1" placeholder="your address"></textarea>
+                                <small class="warning-message"
+                                    *ngIf="this.registrationForm.get('address')?.touched && this.registrationForm.get('address')?.invalid">Please
+                                    enter your address</small>
+                            </div>
+                            <div class="input-div half-div">
+                                <label class="label-name" for="email">Email Address</label>
+                                <input class="form-control" type="email" name="email" formControlName="email"
+                                    placeholder="email id">
+                                <small class="warning-message"
+                                    *ngIf="this.registrationForm.get('email')?.touched && this.registrationForm.get('email')?.invalid">Please
+                                    enter a valid email address</small>
+                            </div>
+                            <div class="input-div half-div">
+                                <label class="label-name" for="password">Password</label>
+                                <input class="form-control" type="password" minlength="8" name="password"
+                                    formControlName="password" placeholder="password">
+                                <small class="warning-message"
+                                    *ngIf="this.registrationForm.get('password')?.touched && this.registrationForm.get('password')?.invalid">Password
+                                    should be of min 8 chars</small>
+                            </div>
+                            <div class="input-div half-div">
+                                <label class="label-name" for="phonenumber">Contact Number</label>
+                                <input class="form-control" type="text" name="phonenumber" formControlName="phonenumber"
+                                    placeholder="mobile number">
+                                <small class="warning-message"
+                                    *ngIf="this.registrationForm.get('phonenumber')?.touched && this.registrationForm.get('phonenumber')?.invalid">Please
+                                    enter a valid mobile number</small>
+                            </div>
+                            <div class="input-div">
+                                <label class="label-name" for="message">Message</label>
+                                <textarea class="form-control text-area" minlength="15" name="message"
+                                    formControlName="message" cols="30" rows="2"
+                                    placeholder="leave your message here"></textarea>
+                                <small class="warning-message"
+                                    *ngIf="this.registrationForm.get('message')?.touched && this.registrationForm.get('message')?.invalid">Message
+                                    should be of min 15 characters</small>
+                            </div>
+                            <div class="btn-div">
+                                <button class="btn btn-save me-2" type="submit"
+                                    [disabled]="!registrationForm.valid">Save</button>
+                                <button class="btn btn-save" type="reset" (click)="onReset()">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 data-col">
+                <app-data-display [details]="details"></app-data-display>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,48 @@
+@import '../../../assets/scss/variables';
+
+.display-module {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-height: 430px;
+    height: 100%;
+
+    .no-data {
+        font-size: $font-lg;
+        color: $color-red;
+        text-align: center;
+        padding: 50px $spacer-2;
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    .data {
+        font-size: $font-sm;
+        color: $color-green;
+        text-align: center;
+        padding: 50px $spacer-2;
+
+        .greeting {
+            font-size: $font-xl;
+            font-weight: 600;
+            padding-bottom: $spacer-1;
+            color: $color-red;
+        }
+
+        .saved {
+            font-size: 300;
+            padding-bottom: $spacer-2;
+        }
+
+        .details {
+            text-align: left;
+            font-weight: 200;
+        }
+
+        .thanks {
+            font-size: $font-lg;
+            font-weight: 300;
+            font-style: italic;
+            padding-top: $spacer-2;
+            color: $color-red;
+        }
+    }
+}

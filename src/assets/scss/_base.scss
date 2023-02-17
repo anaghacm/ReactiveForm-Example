@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 28px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+section{
+    padding:$spacer-2 $spacer-0;
+}
